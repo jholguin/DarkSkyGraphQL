@@ -1,0 +1,25 @@
+{
+  "name": "darkskygraph",
+  "version": "1.0.0",
+  "description": "GraphQL version of Dark Sky API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "s"
+  },
+  "author": "Josh Holguin <josh.holguin@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.8.0",
+    "apollo-server": "^2.11.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -7,7 +7,9 @@ class DarkSky extends RESTDataSource {
     }
 
     async getForcast (latitude, longitude) {
-        return this.get(`${latitude},${longitude}`)
+        return this.get(`${latitude},${longitude}`, {
+            units: 'si'
+        })
     }
 }
 

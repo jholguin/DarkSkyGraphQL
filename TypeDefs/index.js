@@ -2,7 +2,7 @@ const { gql } = require('apollo-server')
 
 const typeDefs = gql`
     
-    type Today{
+    type ForcastData{
         time: Int,
         summary: String,
         icon: String,
@@ -24,12 +24,21 @@ const typeDefs = gql`
         visibility: Float,
         ozone: Float
     }
+
+    type TimeForcast{
+        summary: String,
+        icon: String,
+        data: [ForcastData]
+    }
     
     type Forcast{
         latitude: Float,
         longitude: Float,
         timezone: String,
-        currently: Today
+        currently: ForcastData,
+        minutely: TimeForcast,
+        hourly: TimeForcast,
+        daily: TimeForcast 
     }
 
     type Query{
